@@ -1,0 +1,32 @@
+# Binaries for your project
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Compiled Go binaries
+# These are typically found in a 'bin' directory if you're building locally
+# or in the root of your project if you're using 'go build .'
+bin/
+*.test
+*.out
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Operating system generated files
+.DS_Store
+Thumbs.db
+
+# Go module cache
+# This can be useful if you're using Go modules and want to keep the cache out of version control
+# However, for most cases, it's fine to let Go manage its module cache outside your project directory.
+# This might be relevant in specific scenarios like CI/CD pipelines.
+# vendor/ # Uncomment if you are using vendor directory for dependencies
+
+# Logs and temporary files
+*.log
+*.tmp
