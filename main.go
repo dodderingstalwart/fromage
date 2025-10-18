@@ -15,7 +15,7 @@ func main() {
 	ctx := context.Background()
 
 	// Initialize the Sheets API client
-	srv, err := sheets.NewService(ctx, option.WithCredentialsFile("credentials.json"))
+	srv, err := sheets.NewService(ctx, option.WithCredentialsFile("./credentials.json"))
 	if err != nil {
 		log.Fatalf("Unable to retrieve Sheets client: %v", err)
 	}
