@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"log"
+	"os"
 
 	"golang.org/x/oauth2/google"
 	"google.golang.org/api/option"
@@ -26,7 +27,7 @@ func main() {
 		log.Fatalf("Unable to retrieve Sheets client: %v", err)
 	}
 
-	spreadsheetId := "your-spreadsheet-id"
+	spreadsheetId := os.Getenv("GSHEETID")
 	readRange := "Sheet1!A1:D10"
 	resp, err := srv.Spreadsheets.Values.Get(spreadsheetId, readRange).Do()
 	if err != nil {
