@@ -38,16 +38,16 @@ func main() {
 	readRange := "Sheet1!A1:K10"
 
 	// Retrieve data from the specified range
-	resp, err := srv.Spreadsheets.Values.Get(spreadsheetId, readRange).Do()
+	retrieve, err := srv.Spreadsheets.Values.Get(spreadsheetId, readRange).Do()
 	if err != nil {
 		log.Fatalf("Unable to retrieve data from sheet: %v", err)
 	}
 
-	if len(resp.Values) == 0 {
+	if len(retrieve.Values) == 0 {
 		fmt.Println("No data found.")
 	} else {
 		fmt.Println("Data from sheet:")
-		for _, row := range resp.Values {
+		for _, row := range retrieve.Values {
 			fmt.Println(row)
 		}
 	}
