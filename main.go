@@ -35,7 +35,7 @@ func main() {
 	// The ID of the spreadsheet to retrieve data from.
 	spreadsheetId := os.Getenv("GSHEETID")
 	// The range of cells to read from the spreadsheet.
-	readRange := "Sheet1!A1:D10"
+	readRange := "Sheet1!A1:K10"
 
 	// Retrieve data from the specified range
 	resp, err := srv.Spreadsheets.Values.Get(spreadsheetId, readRange).Do()
