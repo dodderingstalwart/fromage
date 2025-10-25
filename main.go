@@ -22,6 +22,7 @@ func main() {
 		log.Fatalf("Unable to read credentials file: %v", err)
 	}
 
+        // Check if credentials file is correct
 	config, err := google.JWTConfigFromJSON(cred, sheets.SpreadsheetsReadonlyScope)
 	if err != nil {
 		log.Fatalf("Unable to parse client secret file to config: %v", err)
