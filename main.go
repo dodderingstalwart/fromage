@@ -13,8 +13,10 @@ import (
 
 func main() {
 	fmt.Println("Fromage")
+
 	ctx := context.Background()
 
+        // Check for json credentials file 
 	cred, err := os.ReadFile("credentials.json")
 	if err != nil {
 		log.Fatalf("Unable to read credentials file: %v", err)
