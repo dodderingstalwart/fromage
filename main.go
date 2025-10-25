@@ -17,7 +17,7 @@ func main() {
 
 	cred, err := os.ReadFile("credentials.json")
 	if err != nil {
-		log.Fatalf("Unable to read client secret file: %v", err)
+		log.Fatalf("Unable to read credentials file: %v", err)
 	}
 
 	config, err := google.JWTConfigFromJSON(cred, sheets.SpreadsheetsReadonlyScope)
